@@ -113,10 +113,14 @@
   \setlength{\maxlogowidth}{\maxof{\logoleftwidth}{\logorightwidth}}
 }
 
+\setbeamertemplate{background} 
+{
+    \includegraphics[width=\paperwidth]{logos/poster_banner.png}
+}
+
 % Headline
 \setbeamertemplate{headline}
 {
-  \begin{beamercolorbox}{headline}
     \begin{columns}
       \begin{column}{\maxlogowidth}
         \vskip5ex
@@ -148,20 +152,16 @@
       \end{column}
     \end{columns}
     \vspace{5ex}
-    \ifbeamercolorempty[bg]{headline rule}{}{
-      \begin{beamercolorbox}[wd=\paperwidth,colsep=0.5ex]{headline rule}\end{beamercolorbox}
-    }
-  \end{beamercolorbox}
-}
-
+  }
+  
 % Block
 \setbeamertemplate{block begin}
 {
   \begin{beamercolorbox}[colsep*=0ex,dp=2ex,center]{block title}
     \vskip0pt
     \usebeamerfont{block title}\insertblocktitle
-    \vskip-1.25ex
-    \begin{beamercolorbox}[colsep=0.025ex]{block separator}\end{beamercolorbox}
+%    \vskip-1.25ex
+%    \begin{beamercolorbox}[colsep=0.025ex]{block separator}\end{beamercolorbox}
   \end{beamercolorbox}
   {\parskip0pt\par}
   \usebeamerfont{block body}
@@ -169,7 +169,7 @@
   \begin{beamercolorbox}[colsep*=0ex]{block body}
   \justifying
   \setlength{\parskip}{1ex}
-  \vskip-2ex
+ % \vskip-2ex
 }
 \setbeamertemplate{block end}
 {
